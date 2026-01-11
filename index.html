@@ -523,17 +523,29 @@
   </script>
   <script>
     const hamburger = document.getElementById("hamburger");
-    const sidebar = document.getElementById("mobileSidebar");
-    const overlay = document.getElementById("sidebarOverlay");
+const sidebar = document.getElementById("mobileSidebar");
+const overlay = document.getElementById("sidebarOverlay");
 
-    function toggleSidebar() {
-      hamburger.classList.toggle("active");
-      sidebar.classList.toggle("active");
-      overlay.classList.toggle("active");
-    }
+function toggleSidebar() {
+  hamburger.classList.toggle("active");
+  sidebar.classList.toggle("active");
+  overlay.classList.toggle("active");
+}
 
-    hamburger.addEventListener("click", toggleSidebar);
-    overlay.addEventListener("click", toggleSidebar);
+hamburger.addEventListener("click", toggleSidebar);
+overlay.addEventListener("click", toggleSidebar);
+
+// ✅ FIX: close sidebar on link click
+const sidebarLinks = document.querySelectorAll(".mobile-sidebar a");
+
+sidebarLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+});
+
   </script>
 
 
