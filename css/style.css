@@ -6,6 +6,9 @@
   --text-dark: #111;
   --text-muted: #555;
 }
+body.no-scroll {
+  overflow: hidden;
+}
 
 /* RESET */
 * {

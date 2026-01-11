@@ -511,8 +511,7 @@
 
     <p class="footer-copy">
       © <span id="year"></span>
-      <span class="footer-author">Ms. Binderpal Kaur</span>,
-      Assistant Professor of English Literature · All rights reserved
+      <span class="footer-author">Ms. Binderpal Kaur</span>,· All rights reserved
     </p>
 
   </div>
@@ -522,31 +521,59 @@
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
   <script>
-    const hamburger = document.getElementById("hamburger");
-const sidebar = document.getElementById("mobileSidebar");
-const overlay = document.getElementById("sidebarOverlay");
+  const hamburger = document.getElementById("hamburger");
+  const sidebar = document.getElementById("mobileSidebar");
+  const overlay = document.getElementById("sidebarOverlay");
+  const sidebarLinks = document.querySelectorAll(".mobile-sidebar a");
 
-function toggleSidebar() {
-  hamburger.classList.toggle("active");
-  sidebar.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
+  function openSidebar() {
+    hamburger.classList.add("active");
+    sidebar.classList.add("active");
+    overlay.classList.add("active");
+    document.body.classList.add("no-scroll");
+  }
 
-hamburger.addEventListener("click", toggleSidebar);
-overlay.addEventListener("click", toggleSidebar);
-
-// ✅ FIX: close sidebar on link click
-const sidebarLinks = document.querySelectorAll(".mobile-sidebar a");
-
-sidebarLinks.forEach(link => {
-  link.addEventListener("click", () => {
+  function closeSidebar() {
     hamburger.classList.remove("active");
     sidebar.classList.remove("active");
-    overlay.classList.remove("active");
-  });
-});
 
+    setTimeout(() => {
+      overlay.classList.remove("active");
+      document.body.classList.remove("no-scroll");
+    }, 200);
+  }
+
+  function toggleSidebar() {
+    sidebar.classList.contains("active")
+      ? closeSidebar()
+      : openSidebar();
+  }
+
+  hamburger.addEventListener("click", toggleSidebar);
+  overlay.addEventListener("click", closeSidebar);
+
+  // ✅ FIXED navigation logic (NO stammer)
+  sidebarLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault(); // ❌ stop browser jump
+
+      const targetId = link.getAttribute("href");
+      const target = document.querySelector(targetId);
+
+      if (!target) return;
+
+      // smooth scroll handled ONLY here
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+      // close sidebar AFTER scroll starts
+      setTimeout(closeSidebar, 150);
+    });
+  });
   </script>
+
 
 
   <div class="cursor"></div>
