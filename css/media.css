@@ -88,8 +88,8 @@
   }
 
   .photo-holder {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     margin: 0 auto;
   }
 }
@@ -128,13 +128,13 @@
 
   /* SUBTITLE */
   .about-modern-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 0.5rem;
   }
 
   /* TEXT */
   .about-modern-text {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 1.7;
     color: #101010;         /* darker for readability */
     max-width: 100%;
@@ -145,7 +145,7 @@
   .about-modern-skills {
     flex-direction: column;
     gap: 0.8rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 1rem;
   }
 
@@ -177,16 +177,11 @@
 
   /* Timeline container */
   .edu-exp-list {
-    padding-left: 2.5rem;
+    padding-left: 0.3rem;
     position: relative;
   }
 
-  /* Vertical Line */
-  .edu-exp-list::before {
-    left: 18px;
-    width: 2px;
-    background: #e04b3f;
-  }
+
 
   /* Cards become stacked + centered */
   .edu-card {
@@ -201,13 +196,6 @@
     margin: 0 auto;
   }
 
-  /* Timeline Dot — properly aligned */
-  .edu-card::before {
-    left: -34px;
-    top: 32px;
-    width: 14px;
-    height: 14px;
-  }
 
   /* Typography scaling */
   .edu-card-content h3 {
@@ -599,4 +587,10 @@
     margin-bottom: 3rem;
   }
 
+}
+@media (max-width: 900px) {
+  .connect-full {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
 }

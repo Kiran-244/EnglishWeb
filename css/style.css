@@ -246,7 +246,7 @@ body {
 /* Keep image centered */
 .photo-holder {
   margin-top: 2rem;
-  border: 1px solid var(--text-dark);
+  border: 0.3px solid var(--text-muted);
   overflow: hidden; /* important */
   transition: 0.4s ease;
 }
@@ -271,7 +271,7 @@ body {
   letter-spacing: 0.12em;
   margin-bottom: 3rem;
   padding: 1rem 3.5rem;
-  border: 2px solid #111;
+  border: 1px solid #111;
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
@@ -298,6 +298,7 @@ body {
   color: #111;
   border-color: #e0f1f6;
   letter-spacing: 0.12em;
+  border: 1px solid black;
 }
 
 /* Arrow animation */
@@ -650,16 +651,7 @@ body {
   padding-left: 4rem; /* space for timeline */
 }
 
-/* Vertical line */
-.edu-exp-list::before {
-  content: "";
-  position: absolute;
-  left: 30px;
-  top: 0;
-  width: 3px;
-  height: 100%;
-  background: #e04b3f; /* red timeline */
-}
+
 
 /* Each card positioned relative */
 .edu-card {
@@ -833,13 +825,13 @@ body {
   background: transparent;
   border: none;
   font-size: 36px;
-  color: #8c6b5a;
+  color: red;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .research-arrow:hover {
-  color: #5a4036;
+  color: red;
   transform: translateY(-50%) scale(1.15);
 }
 
@@ -850,205 +842,180 @@ body {
    RESEARCH PROJECT DETAIL
    ========================= */
 
-.project-detail {
-  background: var(--bg-left);
-  min-height: 100vh;
-  padding: 5rem 2rem;
+/* Section */
+.blog-section {
+  padding: 3rem 2rem;
+  background: #f5f0e8; /* soft nude background */
 }
 
-.back-link {
-  display: inline-block;
-  margin-bottom: 2.5rem;
-  font-size: 0.9rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--pink-accent);
-  text-decoration: none;
-}
-
-.project-card {
-  max-width: 900px;
+/* Container */
+.container {
+  max-width: 1100px;
   margin: 0 auto;
-  background: #fff;
-  border-radius: 26px;
-  padding: 3rem;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+}
+
+/* Grid */
+.blog-cards {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 3rem;
-}
-
-/* IMAGE */
-.project-image img {
-  width: 100%;
-  border-radius: 18px;
-  object-fit: cover;
-}
-
-/* CONTENT */
-.project-content h1 {
-  font-family: 'Jost', sans-serif;
-  font-size: 2rem;
-  margin-bottom: 0.8rem;
-}
-
-.project-content h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.4rem;
-  font-weight: 500;
-  margin-bottom: 1.6rem;
-  color: #555;
-}
-
-.project-content p {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.2rem;
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-  color: #333;
-}
-
-/* STATUS */
-.project-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: #f7f2f4;
-  color: var(--pink-accent);
-  padding: 0.6rem 1.2rem;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  margin-bottom: 1.4rem;
-}
-
-/* CONTACT */
-.project-contact {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem; /* tight spacing */
   margin-top: 2rem;
 }
 
-.email-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  color: var(--pink-accent);
+/* Card */
+.interest-card {
+  background: #ffffff;
+  border: 2px solid #8b1e1e; /* deep red border */
+  border-radius: 0; /* perfect square */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  transition: 0.25s ease;
+}
+
+/* Image */
+.interest-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content */
+.card-content {
+  padding: 1rem 1.1rem; /* tight internal spacing */
+}
+
+.card-content h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0.6rem;
+  color: #444;
+}
+
+.read-time {
+  font-size: 0.8rem;
+  color: #777;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Button */
+.read-btn {
+  font-size: 0.85rem;
   text-decoration: none;
+  color: #8b1e1e;
   font-weight: 500;
+}
+
+.read-btn:hover {
+  text-decoration: underline;
+}
+
+/* Hover */
+.interest-card:hover {
+  background: #fdf7f2;
 }
 /* =========================
    CONNECT — FULL WIDTH
    ========================= */
-
 .connect-full {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 100vh;
-  background: #faf9f6;
+  gap: 4rem;
+  padding: 5rem 4rem;
+  background: #f5f0e8; /* nude tone */
 }
 
-/* LEFT VISUAL */
-.connect-visual {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5rem;
-  /* background: #f1a728; */
-
+/* LEFT FORM */
+.connect-form-wrapper {
+  background: #ffffff;
+  border: 2px solid #db8484; /* strong red academic border */
+  padding: 2rem;
 }
 
-.connect-visual img {
-  max-width: 70%;
-  height: auto;
-  filter: drop-shadow(0 25px 50px rgba(0,0,0,0.2));
+.connect-form h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+  color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0; /* no round corners */
+  font-size: 0.9rem;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: red;
+}
+
+/* Submit button */
+.submit-btn {
+  width: 100%;
+  padding: 0.7rem;
+  background:red;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.submit-btn:hover {
+  background: red;
 }
 
 /* RIGHT CONTENT */
-.connect-content {
-  padding: 6rem 6rem 6rem 5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: #ffffff;
+.connect-content .title {
+  margin-bottom: 1.5rem;
 }
 
-/* TITLE */
-.connect-title {
-  font-family: 'Jost', sans-serif;
-  font-size: 3rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  margin-bottom: 2.5rem;
-  color: #111;
-  position: relative;
-}
-
-.connect-title::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: var(--pink-accent);
-  margin-top: 0.8rem;
-}
-
-/* INTRO LINE */
 .connect-intro {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.6rem;
-  line-height: 1.9;
-  color: #222;
-  margin-bottom: 2.8rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
 }
 
-/* BODY TEXT */
-.connect-notes p {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.3rem;
-  line-height: 1.9;
-  color: #444;
-  margin-bottom: 1.8rem;
+.connect-notes {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
 }
 
-/* EMAIL ACTION */
 .connect-action {
-  margin-top: 2.5rem;
+  margin-top: 2rem;
+  font-weight: 600;
+  color:red;
+  letter-spacing: 1px;
 }
 
-.connect-action a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
-  font-family: 'Jost', sans-serif;
-  font-size: 0.95rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--pink-accent);
-  text-decoration: none;
-  position: relative;
-}
-
-/* UNDERLINE ANIMATION */
-.connect-action a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0;
-  height: 2px;
-  background: var(--pink-accent);
-  transition: width 0.5s ease;
-}
-
-.connect-action a:hover::after {
-  width: 100%;
-}
-
-/* SIGNATURE */
 .connect-sign {
-  margin-top: 3rem;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.2rem;
-  color: #777;
+  margin-top: 2rem;
+  font-style: italic;
 }
+
 /* =========================
    FOOTER
    ========================= */
@@ -1178,55 +1145,128 @@ body {
   margin: 0 1.8rem 1rem;
   color: #111;
 }
-
-/* READ MORE */
 .read-btn {
-  position: relative;
-  display: inline-block;
-  margin: 0 1.8rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--pink-accent);
+  display: block;
+  width: 120px;
+  margin: 0.8rem auto 0;   /* centers button */
+  padding: 0.55rem 0;
+  text-align: center;
+
+  background:red;    /* deep red */
+  color: #ffffff;
   text-decoration: none;
-  padding-bottom: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  border-radius: 0;        /* perfect square */
+  transition: 0.25s ease;
 }
 
-.read-btn::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 2px;
-  background: var(--pink-accent);
-  transition: width 0.3s ease;
+.read-btn:hover {
+  background: #6f1515;     /* darker red on hover */
 }
 
-.read-btn:hover::after {
+/* =========================
+   CONNECT — FULL WIDTH
+   ========================= */
+   /* =========================
+   CONNECT SECTION
+========================= */
+
+.connect-full {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  background: #f5f0e8;
+  box-sizing: border-box;
+}
+
+/* LEFT FORM */
+.connect-form-wrapper {
+  background: #ffffff;
+  border: 2px solid #8b1e1e;
+  padding: 2rem;
+  box-sizing: border-box;
   width: 100%;
 }
 
-/* READ TIME */
-.read-time {
-  margin: 0.6rem 1.8rem 0;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-.card-image {
-  width: 100%;
-  height: 190px;              /* fixed height */
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fafafa;
+/* FORM TITLE */
+.connect-form h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
 }
 
-/* Image itself */
-.card-image img {
+/* FORM GROUP */
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+  color: #444;
+}
+
+/* INPUTS */
+.form-group input,
+.form-group textarea {
   width: 100%;
-  height: 100%;
-  object-fit: contain;        /* keeps full image visible */
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #8b1e1e;
+}
+
+/* BUTTON */
+.submit-btn {
+  width: 100%;
+  padding: 0.7rem;
+  background: #e21b1b;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #b51515;
+}
+
+/* RIGHT CONTENT */
+.connect-content {
+  width: 100%;
+}
+
+/* =========================
+   RESPONSIVE FIX
+========================= */
+
+@media (max-width: 900px) {
+
+  .connect-full {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.2rem;   /* reduce side padding */
+  }
+
+  .connect-form-wrapper {
+    padding: 1.5rem;        /* slightly tighter */
+  }
+
 }
 
 
