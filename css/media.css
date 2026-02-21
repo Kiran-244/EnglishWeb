@@ -56,7 +56,7 @@
     padding: 2.5rem 1.5rem !important;
     text-align: center;
     align-items: center;
-    background: var(--bg-left);
+    height:400px;
   }
 
   .split-left h1 {
@@ -740,5 +740,8 @@
   /* Hamburger spacing */
   .hamburger {
     padding: 8px;            /* tap-friendly & aligned */
+  }
+  .title{
+    font-size: 1.8rem;
   }
 }
