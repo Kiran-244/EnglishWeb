@@ -1,7 +1,7 @@
 /* ======================================
    GLOBAL MOBILE RESET
    ====================================== */
-@media (max-width: 1024px) {
+@media (max-width: 1024px){
 
   /* Prevent horizontal scroll */
   html, body {
@@ -84,255 +84,144 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #ffffff;
     margin-bottom:0px;
   }
 
   .photo-holder {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     margin: 0 auto;
   }
+}
   /* ======================================
-     ABOUT SECTION
-     ====================================== */
+   ABOUT SECTION — MOBILE
+====================================== */
 
-  .about-image-led {
-    padding: 4rem 1.8rem;
+@media (max-width: 768px) {
+
+  .about-modern {
+    padding: 4rem 1.2rem;   /* tighter side spacing */
   }
 
-  .about-image-grid {
+  .about-modern-container {
     grid-template-columns: 1fr;
-    gap: 3rem;
-    text-align: center;
+    gap: 2.5rem;
   }
 
-  .about-title {
-    font-size: 2.2rem;
-    letter-spacing: 0.18em;
-  }
-
-  .about-title::after {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .about-info p {
-    font-size: 1.3rem;
-    line-height: 1.8;
-    max-width: 100%;
-  }
-
-  .about-icons {
-    justify-content: center;
-  }
-
-  .about-image img {
-    max-width: 300px;
+  /* IMAGE */
+  .about-modern-image img {
+    max-width: 0px;
     margin: 0 auto;
   }
-}
-/* =========================
-   ABOUT ME — MOBILE ONLY
-   ========================= */
-@media (max-width: 768px) {
 
-  .about-title {
+  .image-accent {
+    left: -20px;
+    bottom: -20px;
+  }
+
+  /* TITLE */
+  .about-modern-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
     text-align: center;
-    margin-top: 0rem;     /* reduces space from above */
-    margin-bottom: 2rem;    /* keeps breathing room below */
   }
 
-  .about-title::after {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/* ======================================
-   SMALL MOBILE (PHONES)
-   ====================================== */
-@media (max-width: 480px) {
-
-  .split-left h1 {
-    font-size: 2rem;
-    letter-spacing: 0.08em;
-  }
-
-  .photo-holder {
-    width: 180px;
-    height: 180px;
-  }
-
-  .about-title {
-    font-size: 1.9rem;
-  }
-}
-/* =====================================
-   EDUCATION & EXPERIENCE — MOBILE
-   ===================================== */
-@media (max-width: 768px) {
-
-  /* SECTION WRAPPER */
-  .edu-exp {
-    padding: 4rem 1.6rem;
-  }
-
-  /* SECTION TITLE */
-  .edu-exp .section-title {
-    text-align: center;
-    font-size: 2rem;
-    letter-spacing: 0.18em;
-    margin: 0 0 2.5rem;
-  }
-
-  .edu-exp .section-title::after {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* CARD LIST */
-  .edu-exp-list {
-    gap: 2rem;
-  }
-
-  /* CARD */
-  .edu-card {
-    flex-direction: column;
-    align-items: center;
-    padding: 1.8rem;
-    gap: 1.4rem;
-  }
-
-  /* IMAGE — CENTERED & WIDE */
-  .edu-card-img {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1.2rem;
-  }
-
-  .edu-card-img img {
-    width: 100%;
-    max-width: 220px;
-    height: auto;
-    object-fit: contain;
-  }
-
-  /* CONTENT */
-  .edu-card-content {
-    text-align: center;
-    width: 100%;
-  }
-
-  .edu-meta {
-    font-size: 0.9rem;
-    letter-spacing: 0.18em;
+  /* SUBTITLE */
+  .about-modern-subtitle {
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
   }
 
+  /* TEXT */
+  .about-modern-text {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: #101010;         /* darker for readability */
+    max-width: 100%;
+    margin-bottom: 1.1rem;
+  }
+
+  /* SKILLS */
+  .about-modern-skills {
+    flex-direction: column;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  /* BUTTONS */
+  .about-modern-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    text-align: center;
+    padding: 0.9rem;
+  }
+}
+ /* =====================================
+   EDUCATION & EXPERIENCE — MOBILE
+   ===================================== */
+/* =========================
+   REFINED MOBILE TIMELINE
+========================= */
+@media (max-width: 768px) {
+
+  /* Section padding refinement */
+  .edu-exp {
+    padding: 4rem 1.5rem;
+  }
+
+  /* Timeline container */
+  .edu-exp-list {
+    padding-left: 2.5rem;
+    position: relative;
+  }
+
+  /* Vertical Line */
+  .edu-exp-list::before {
+    left: 18px;
+    width: 2px;
+    background: #e04b3f;
+  }
+
+  /* Cards become stacked + centered */
+  .edu-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    gap: 1.2rem;
+  }
+
+  /* Image centered */
+  .edu-card-img {
+    margin: 0 auto;
+  }
+
+  /* Timeline Dot — properly aligned */
+  .edu-card::before {
+    left: -34px;
+    top: 32px;
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Typography scaling */
   .edu-card-content h3 {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.rem;
-    line-height: 1.35;
-    margin-bottom: 0.4rem;
-    font-weight: 150;
+    font-size: 1.25rem;
   }
 
   .edu-sub {
-    font-size: 1.3rem;
-    line-height: 1.6;
-  }
-
-  .edu-year {
-    font-size: 1.3rem;
-    display: block;
-    margin-top: 0.2rem;
-    color: var(--pink-accent);
-  }
-
-  /* BULLET POINTS */
-  .edu-points {
-    margin-top: 1rem;
-    padding-left: 1.2rem;
-    text-align: left;
-  }
-
-  .edu-points li {
-    font-size: 1.3rem;
-    line-height: 1.6;
-    margin-bottom: 0.4rem;
-  }
-}
-
-/* =====================================
-   SMALL PHONES (EXTRA POLISH)
-   ===================================== */
-@media (max-width: 480px) {
-
-  .edu-exp {
-    padding: 3.5rem 1.3rem;
-  }
-
-  .edu-exp .section-title {
-    font-size: 1.7rem;
-    letter-spacing: 0.15em;
-  }
-
-  .edu-card {
-    padding: 1.5rem;
-  }
-
-  .edu-card-img img {
-    max-width: 120px;
-  }
-
-  .edu-card-content h3 {
     font-size: 1.1rem;
   }
 
-  .edu-sub {
-    font-size: 1.05rem;
-  }
-
-  .edu-points li {
+  .edu-year {
     font-size: 1rem;
   }
-}
-/* SOFT LIFT ON HOVER (DESKTOP ONLY) */
-@media (hover: hover) {
-  .edu-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
-  }
-}
 
-/* IMAGE MICRO-FLOAT */
-.edu-card-img img {
-  transition:
-    transform 0.8s ease,
-    opacity 0.8s ease;
-}
-
-/* Image responds subtly when card lifts */
-@media (hover: hover) {
-  .edu-card:hover .edu-card-img img {
-    transform: translateY(-4px) scale(1.02);
-  }
-}
-
-/* CONTENT FADE-UP MICRO MOTION */
-.edu-card-content > * {
-  transition:
-    transform 0.6s ease,
-    opacity 0.6s ease;
-}
-
-/* Gentle content nudge on hover */
-@media (hover: hover) {
-  .edu-card:hover .edu-card-content > * {
-    transform: translateY(-2px);
-  }
 }
 /* HOVER EFFECT */
 @media (hover: hover) {
@@ -345,100 +234,52 @@
    ACADEMIC WORK — MOBILE RESPONSIVE
    ===================================== */
 
+/* =========================
+   RESPONSIVE BREAKPOINTS
+========================= */
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .research-card {
+    min-width: calc(100% / 2 - 1rem);
+  }
+
+  .research-arrow.prev {
+    left: -20px;
+  }
+
+  .research-arrow.next {
+    right: -20px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
 
-  /* SECTION */
-  .research-services {
+  .research-modern {
     padding: 4rem 1.5rem;
-    text-align: center;
-  }
-
-  /* TITLE */
-  .research-services .section-title {
-    font-size: 2rem;
-    letter-spacing: 0.18em;
-    margin-bottom: 2.5rem;
-  }
-
-  .research-services .section-title::after {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* GRID */
-  .research-card-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    margin-top: 0;
-  }
-
-  /* CARD */
-  .research-card {
-    padding: 2.4rem 1.6rem 2.2rem;
-    border-radius: 18px;
-  }
-
-  /* ICON */
-  .research-icon {
-    width: 56px;
-    height: 56px;
-    font-size: 1.2rem;
-    margin-bottom: 1.4rem;
-  }
-
-  /* CARD TITLE */
-  .research-card h3 {
-    font-size: 1.3rem;
-    line-height: 1.4;
-    margin-bottom: 0.8rem;
-  }
-
-  /* TEXT */
-  .research-card p {
-    font-size: 1.3rem;
-    line-height: 1.65;
-    margin-bottom: 1.6rem;
-  }
-
-  /* BUTTON */
-  .research-btn {
-    font-size: 0.8rem;
-    padding: 0.55rem 1.4rem;
-  }
-}
-
-/* =====================================
-   SMALL PHONES (EXTRA POLISH)
-   ===================================== */
-
-@media (max-width: 480px) {
-
-  .research-services {
-    padding: 3.5rem 1.2rem;
-  }
-
-  .research-services .section-title {
-    font-size: 1.7rem;
-    letter-spacing: 0.15em;
   }
 
   .research-card {
-    padding: 2.6rem 1.rem 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    min-width: 100%;
   }
 
-  .research-icon {
-    width: 52px;
-    height: 52px;
-    font-size: 1.1rem;
+  .research-track {
+    gap: 1rem;
   }
 
-  .research-btn {
-    font-size: 0.75rem;
+  .research-arrow {
+    font-size: 28px;
+  }
+
+  .research-arrow.prev {
+    left: -10px;
+  }
+
+  .research-arrow.next {
+    right: -10px;
   }
 }
-
 /* =========================
    PROJECT PAGE — MOBILE FIX
    ========================= */
@@ -744,4 +585,18 @@
   .title{
     font-size: 1.8rem;
   }
+}
+@media (max-width: 768px) {
+
+  /* Add space after image */
+  .photo-holder {
+    margin-bottom: 2.5rem;
+  }
+
+  /* Give more breathing space to button */
+  .explore-more {
+    margin-top: 0.2rem;
+    margin-bottom: 3rem;
+  }
+
 }

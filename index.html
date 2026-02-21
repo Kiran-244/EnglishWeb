@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Fonts -->
-   
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap"
@@ -110,72 +110,75 @@
     <div class="split-divider"></div>
 
     <!-- RIGHT -->
-    <section class="split-right">
-      <div class="photo-holder">
-        <img src="images/hero_pic3.png" loading="lazy" width="400" height="500"
-          alt="Portrait of Ms. Binderpal Kaur, Assistant Professor of English Literature" />
-      </div>
-    </section>
+   <section class="split-right">
+  <div class="photo-holder">
+    <img src="images/final_hero.png" 
+         loading="lazy" 
+         width="400" 
+         height="500"
+         alt="Portrait of Ms. Binderpal Kaur, Assistant Professor of English Literature" />
+  </div>
+
+  <!-- Explore More -->
+  <a href="#about" class="explore-more">
+  <span>Explore Me More</span>
+  <span class="arrow">&#8595;</span>
+</a>
+
+</section>
 
   </main>
-
   <!-- ABOUT ME -->
-  <section id="about" class="about-image-led">
-    <h2 class="title center-title reveal">About Me</h2>
-  <div class="about-image-grid">
+  <section id="about" class="about-modern">
 
-    <!-- LEFT: ABOUT CONTENT -->
-    <div class="about-info">
-      <!-- Paragraph -->
-      <p class="reveal delay-1">
-        Ms. Binderpal Kaur is an <strong>Assistant Professor of English Literature</strong> at
-        Akal University, Talwandi Sabo. Her academic interests include
-        <strong>British Literature</strong> and <strong>Commonwealth Studies</strong>.
-        She is actively engaged in teaching, academic research, and literary scholarship,
-        with a strong commitment to higher education.
-      </p>
+  <div class="about-modern-container">
 
-      <!-- Icons -->
-      <div class="about-icons reveal delay-2">
-        <a 
-          href="https://www.researchgate.net/profile/Binderpal-Kaur" 
-          class="icon-card"
-          aria-label="ResearchGate profile of Ms. Binderpal Kaur"
-        >
-          <i class="fab fa-researchgate"></i>
-          <span>ResearchGate</span>
-        </a>
+    <!-- LEFT IMAGE SIDE -->
+    <div class="about-modern-image reveal delay-1">
+      <div class="image-accent"></div>
 
-        <a 
-          href="#" 
-          class="icon-card"
-          aria-label="LinkedIn profile of Ms. Binderpal Kaur"
-        >
-          <i class="fab fa-linkedin-in"></i>
-          <span>LinkedIn</span>
-        </a>
-
-        <a 
-          href="mailto:Binderpalkaur75@gmail.com" 
-          class="icon-card"
-          aria-label="Email Ms. Binderpal Kaur"
-        >
-          <i class="fas fa-envelope"></i>
-          <span>Email</span>
-        </a>
-      </div>
-
+      <img 
+        src="images/about3.png"
+        alt="Profile image"
+        loading="lazy"
+        width="520"
+        height="600"
+      />
     </div>
 
-    <!-- RIGHT: IMAGE -->
-    <div class="about-image reveal delay-3">
-      <img 
-        src="images/about2.png" 
-        alt="Ms. Binderpal Kaur, Assistant Professor of English Literature, at Akal University"
-        loading="lazy"
-        width="420"
-        height="520"
-      />
+    <!-- RIGHT CONTENT SIDE -->
+    <div class="about-modern-content">
+
+      <h2 class="about-modern-title reveal delay-2">
+        A Few Words <br> About Me
+      </h2>
+
+      <h4 class="about-modern-subtitle reveal delay-3">
+        Passion driven by literature —
+      </h4>
+
+      <p class="about-modern-text reveal delay-4">
+        Ms. Binderpal Kaur is an Assistant Professor of English Literature at Akal University. She specializes in British Literature and Commonwealth Studies.
+      </p>
+
+      <p class="about-modern-text reveal delay-4">
+        She is actively engaged in teaching and academic research. Her work explores the intersections of literature, culture, and society, contributing to the academic discourse in her field.
+      </p>
+
+      <!-- Skills Row -->
+      <div class="about-modern-skills reveal delay-3">
+        <span>✓ Academic Research</span>
+        <span>✓ Literary Studies</span>
+        <span>✓ Teaching Excellence</span>
+        <span>✓ Curriculum Development</span>
+      </div>
+
+      <!-- Buttons -->
+      <div class="about-modern-buttons reveal delay-4">
+        <a href="#" class="btn-primary">Portfolio</a>
+        <a href="#" class="btn-outline">Download CV</a>
+      </div>
+
     </div>
 
   </div>
@@ -190,6 +193,7 @@
 
     <!-- EDUCATION CARD -->
     <article class="edu-card reveal delay-1">
+      <div class="timeline-dot"></div>
       <div class="edu-card-img">
         <img 
           src="images/w1.png" 
@@ -274,12 +278,12 @@
           Akal University, Talwandi Sabo<br>
           <span class="edu-year">September 2021 – Present</span>
         </p>
-
+<!-- 
         <ul class="edu-points">
           <li>Teaching undergraduate courses in English Literature</li>
           <li>Guiding students in literary analysis and academic writing</li>
           <li>Encouraging critical engagement across genres and cultures</li>
-        </ul>
+        </ul> -->
       </div>
     </article>
 
@@ -287,94 +291,74 @@
 
   </section>
 
-   <section id="research" class="research-services">
+<section id="research" class="research-modern">
 
   <h2 class="title center-title reveal">
     Academic Research and Scholarly Work
   </h2>
 
-  <div class="research-card-grid">
+  <div class="research-wrapper">
 
-    <!-- CARD 1 -->
-    <article class="research-card reveal delay-1">
-      <span class="research-card-shadow"></span>
+    <button class="research-arrow prev">&#10094;</button>
 
-      <div class="research-icon" aria-hidden="true">
-        <i class="fas fa-file-alt"></i>
+    <div class="research-viewport">
+      <div class="research-track">
+
+        <!-- CARD 1 -->
+        <article class="research-card nude-1">
+          <div class="card-content">
+            <h3>Research Publications</h3>
+            <p>
+              “Social Media and Shifting Paradigms of Representation:
+              An Overview of Instagram”
+            </p>
+            <button class="explore-btn">Explore</button>
+          </div>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="research-card nude-2">
+          <div class="card-content">
+            <h3>Academic Conferences</h3>
+            <p>
+              Organizing Committee Member for
+              “Mapping Violence and Social Exclusion”
+            </p>
+            <button class="explore-btn">Explore</button>
+          </div>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="research-card nude-3">
+          <div class="card-content">
+            <h3>Research Project</h3>
+            <p>
+              Gendered identities and disciplining of women:
+              A critical reading of A Life Less Ordinary.
+            </p>
+            <button class="explore-btn">Explore</button>
+          </div>
+        </article>
+
+        <!-- CARD 4 -->
+        <article class="research-card nude-4">
+          <div class="card-content">
+            <h3>Editorial Contribution</h3>
+            <p>
+              Contributed to interdisciplinary academic discourse
+              on representation and cultural studies.
+            </p>
+            <button class="explore-btn">Explore</button>
+          </div>
+        </article>
+
       </div>
+    </div>
 
-      <h3>Research Publications</h3>
-
-      <p>
-        A scholarly research paper titled
-        <i>“Social Media and Shifting Paradigms of Representation:
-        An Overview of Instagram”</i>.
-      </p>
-
-      <a 
-        href="https://www.researchgate.net/profile/Binderpal-Kaur"
-        class="research-btn"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="View research publication on ResearchGate"
-      >
-        View Publication
-      </a>
-    </article>
-
-    <!-- CARD 2 -->
-    <article class="research-card reveal delay-2">
-      <span class="research-card-shadow"></span>
-
-      <div class="research-icon" aria-hidden="true">
-        <i class="fas fa-chalkboard-teacher"></i>
-      </div>
-
-      <h3>Academic Conferences</h3>
-
-      <p>
-        Member of the Organizing Committee for the International Conference on
-        <i>“Mapping Violence and Social Exclusion”</i> (ICMVSE-24).
-      </p>
-
-      <a 
-        href="https://auts.ac.in/conferences/icmvse24/international-conference-on-mapping-violence-and-social-exclusion-2024/"
-        class="research-btn"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="View details of the ICMVSE-24 conference"
-      >
-        View Details
-      </a>
-    </article>
-
-    <!-- CARD 3 -->
-    <article class="research-card reveal delay-3">
-      <span class="research-card-shadow"></span>
-
-      <div class="research-icon" aria-hidden="true">
-        <i class="fas fa-pen-nib"></i>
-      </div>
-
-      <h3>Research Project</h3>
-
-      <p>
-        Gendered identities and disciplining of women:
-        a critical reading of <i>A Life Less Ordinary</i> by Baby Halder.
-      </p>
-
-      <a 
-        href="other/not_avail.html"
-        class="research-btn"
-        aria-label="Learn more about the research project"
-      >
-        Learn More
-      </a>
-    </article>
+    <button class="research-arrow next">&#10095;</button>
 
   </div>
-
-   </section>
+</section>
 
   <section id="reflective" class="blog-section">
   <div class="container">
@@ -573,6 +557,61 @@
   </script>
 
 
+<script>
+const track = document.querySelector('.research-track');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+const cards = document.querySelectorAll('.research-card');
+
+let index = 0;
+let visibleCards = getVisibleCards();
+const totalCards = cards.length;
+
+function getVisibleCards() {
+  if (window.innerWidth < 768) return 1;
+  if (window.innerWidth < 1024) return 2;
+  return 3;
+}
+
+function updateCarousel() {
+  visibleCards = getVisibleCards();
+
+  const cardWidth = cards[0].offsetWidth +
+    parseInt(getComputedStyle(track).gap || 0);
+
+  track.style.transform = `translateX(-${index * cardWidth}px)`;
+
+  cards.forEach(card => card.classList.remove('active'));
+
+  for (let i = index; i < index + visibleCards; i++) {
+    if (cards[i]) cards[i].classList.add('active');
+  }
+}
+
+next.addEventListener('click', () => {
+  if (index < totalCards - visibleCards) {
+    index++;
+    updateCarousel();
+  }
+});
+
+prev.addEventListener('click', () => {
+  if (index > 0) {
+    index--;
+    updateCarousel();
+  }
+});
+
+window.addEventListener('resize', () => {
+  visibleCards = getVisibleCards();
+  if (index > totalCards - visibleCards) {
+    index = totalCards - visibleCards;
+  }
+  updateCarousel();
+});
+
+updateCarousel();
+</script>
 
   <div class="cursor"></div>
   <script src="main.js"></script>
