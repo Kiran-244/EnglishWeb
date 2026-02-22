@@ -28,6 +28,22 @@
     font-size: 0.65rem;
     letter-spacing: 0.2em;
   }
+  /* Make header sticky */
+ /* ===============================
+   STICKY HEADER (WORKS MOBILE)
+================================ */
+
+.site-header {
+  position: fixed;   /* use fixed instead of sticky */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.65); /* transparent white */
+  backdrop-filter: blur(12px);
+  z-index: 5000;     /* higher than sidebar */
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
 /* =====================================
    HERO — MOBILE FIX (FINAL)
    ===================================== */
@@ -99,68 +115,91 @@
 
 @media (max-width: 768px) {
 
+  /* SECTION */
   .about-modern {
-    padding: 4rem 1.2rem;   /* tighter side spacing */
+    padding: 3rem 1rem;  /* less left-right space */
   }
 
   .about-modern-container {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 1.8rem;
   }
 
-  /* IMAGE */
+  /* IMAGE HIDE */
   .about-modern-image img {
-    max-width: 0px;
-    margin: 0 auto;
-  }
-
-  .image-accent {
-    left: -20px;
-    bottom: -20px;
+    display: none;
   }
 
   /* TITLE */
   .about-modern-title {
-    font-size: 2.5rem;
-    line-height: 1.2;
+    font-size: 2rem;
+    line-height: 1.25;
     text-align: center;
+    margin-bottom: 0.8rem;
+    color: #111;   /* darker */
   }
 
   /* SUBTITLE */
   .about-modern-subtitle {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #111;
   }
 
-  /* TEXT */
+  /* PARAGRAPH TEXT */
   .about-modern-text {
-    font-size: 1.3rem;
-    line-height: 1.7;
-    color: #101010;         /* darker for readability */
-    max-width: 100%;
-    margin-bottom: 1.1rem;
+    font-size: 1.1rem;
+    line-height: 1.75;
+    margin-bottom: 1.2rem;
+
+    color: #000;   /* FULL BLACK */
+    text-align: left;
   }
 
   /* SKILLS */
   .about-modern-skills {
+    display: flex;
     flex-direction: column;
-    gap: 0.8rem;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
+    gap: 0.7rem;
+    margin-top: 1.2rem;
+  }
+
+  .about-modern-skills > span {
+    display: block;
+    padding: 0.7rem 1rem;
+    background: #f0f0f0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #000;
   }
 
   /* BUTTONS */
-  .about-modern-buttons {
-    flex-direction: column;
-    gap: 1rem;
+    .about-modern-buttons {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
   }
 
   .btn-primary,
   .btn-outline {
+    flex: 1;              /* equal width */
     width: 100%;
+    margin: 0;            /* remove margin-left */
+    padding: 0.85rem;
     text-align: center;
-    padding: 0.9rem;
   }
+
+  .btn-primary {
+    background: red;
+    color: #fff;
+    border: none;
+  }
+
+  .btn-outline {
+    border: 1px solid #000;
+    color: #000;
+  }
+
 }
  /* =====================================
    EDUCATION & EXPERIENCE — MOBILE
@@ -266,6 +305,27 @@
 
   .research-arrow.next {
     right: -10px;
+  }
+  /* Enable horizontal scroll with snap */
+   .research-viewport {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .research-viewport::-webkit-scrollbar {
+    display: none; /* hide scrollbar */
+  }
+
+  .research-track {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .research-card {
+    min-width: 100%;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
   }
 }
 /* =========================
@@ -588,9 +648,50 @@
   }
 
 }
+/* ===================================
+   CONNECT SECTION – RESPONSIVE
+=================================== */
+
 @media (max-width: 900px) {
+
   .connect-full {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 3rem;
+    padding: 4rem 1rem;  /* reduced side padding */
+  }
+
+  .connect-form-wrapper {
+    justify-content: center;
+  }
+
+  .connect-form {
+    max-width: 90%;
+  }
+  .connect-content .title {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  /* underline aligned to left */
+  .connect-content .title::after {
+    margin: 0.6rem 0 0 0;
+  }
+
+  .connect-intro,
+  .connect-notes p {
+    width: 100%;
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  .connect-action,
+  .connect-sign {
+    width: 100%;
+  }
+
+}
+@media (max-width: 900px) {
+  .connect-content {
+    display: none;
   }
 }
